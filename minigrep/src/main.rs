@@ -4,12 +4,10 @@ use std::process;
 use minigrep::Config;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-
-    let config = Config::build(&args).unwrap_or_else(|err| {
+    let config = Config::build(env::args()).unwrap_or_else(|err| {
         eprintln!(
-            "Error parsing arguments: usage {} <query> <file_path>: {}",
-            args[0], err
+            "Error parsing arguments: usage migrep <query> <file_path>: {}",
+            err
         );
         process::exit(1);
     });
