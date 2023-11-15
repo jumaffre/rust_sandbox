@@ -3,8 +3,12 @@ name = "lib_a"
 version = "0.1.0"
 edition = "2021"
 
+# Propagate experimental flag to lib_b when required
+[features]
+experimental_a = ["lib_b/experimental"]
+
 
 [dependencies]
-lib_b = { path = "../lib_b" } # Uses lib _without_ experimental feature
+lib_b = { path = "../lib_b"} # Uses lib _without_ experimental feature
 
 
