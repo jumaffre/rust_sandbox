@@ -30,3 +30,5 @@ test_lib_a --experimental=true--> lib_b
 ```
 
 Problem: Is there a way to build `test_lib_a` so that `lib_b` is always used with the `experimental` feature turned on.
+
+Solution (!!): Add an `experimental_a` flag (name doesn't matter) to `lib_a`, which in turns enables the `experimental` feature on `lib_b`. See [this commit](https://github.com/jumaffre/rust_sandbox/commit/d0a41d2a9e401bc8d599034d2845d4febeaff6ef).
