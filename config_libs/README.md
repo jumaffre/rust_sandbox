@@ -18,7 +18,6 @@ note: found an item that was configured out
  --> git/rust_sandbox/config_libs/lib_b/src/lib.rs:5:12
   |
 5 | pub struct BType {}
-
 ```
 
 ### Dependency graph: 
@@ -29,3 +28,5 @@ flowchart BT
 test_lib_a --> lib_a --experimental=false--> lib_b
 test_lib_a --experimental=true--> lib_b
 ```
+
+Problem: Is there a way to build `test_lib_a` so that `lib_b` is always used with the `experimental` feature turned on.
