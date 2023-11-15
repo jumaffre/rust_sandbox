@@ -5,6 +5,6 @@ edition = "2021"
 
 
 [dependencies]
-lib_b = { path = "../lib_b" } # Uses lib without experimental feature
+lib_b = { path = "../lib_b" } # Uses lib _without_ experimental feature
 
 
