@@ -1,0 +1,9 @@
+[package]
+name = "test_lib_a"
+version = "0.1.0"
+edition = "2021"
+
+# lib_test_a depends on lib_a, but also lib_b _with_ experimental features
+[dependencies]
+lib_b = { path = "../lib_b", features = ["experimental"] }
+lib_a = { path = "../lib_a" }
